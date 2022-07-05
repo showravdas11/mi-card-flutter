@@ -8,41 +8,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      backgroundColor: Colors.teal,
-      body: SafeArea(
-          child: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-            // height: 100.0,
-            // width: double.infinity,
-            width: 100.0,
-            color: Colors.white,
-            child: Text('Container 1'),
-          ),
-          SizedBox(
-            width: 20.0,
-          ),
-          Container(
-            // height: 100.0,
-            // width: double.infinity,
-            width: 100.0,
-            color: Colors.blue,
-            child: Text('Container 2'),
-          ),
-          SizedBox(
-            width: 20.0,
-          ),
-          Container(
-            // height: 100.0,
-            // width: double.infinity,
-            width: 100.0,
-            color: Colors.pink[900],
-            child: Text('Container 3'),
-          ),
-        ],
-      )),
-    ));
+      home: Scaffold(
+          backgroundColor: Colors.teal,
+          body: SafeArea(
+              child: Column(
+            children: const <Widget>[
+              CircleAvatar(
+                  radius: 50.0,
+                  // backgroundColor: Colors.red,
+                  backgroundColor: Colors.transparent,
+                  backgroundImage: NetworkImage(
+                      'https://library.kissclipart.com/20180919/xae/kissclipart-male-avatar-icon-clipart-computer-icons-avatar-104635e37f6b2f94.png')),
+              Text(
+                'Showrav Dass',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    color: Color.fromARGB(230, 178, 223, 219),
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.5),
+              ),
+            ],
+          ))),
+    );
   }
 }
